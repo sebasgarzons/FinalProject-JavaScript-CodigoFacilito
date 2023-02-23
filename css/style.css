@@ -1,23 +1,19 @@
-/* Georgia Bold
-Leelawadee UI Bold
 
-Microsoft Tai Le*/
-
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 :root {
     --white: #ffffff;
     --black: #0000;
 
-
     --dark-blue: #071E3D;
     --blue: #1F4287;
     --turquesa: #278EA5;
-    --green: #21E6C1;
-
-    
+    --green: #21E6C1;    
     --error: #ff0000;    
+    
+    --fuente:'Quicksand', sans-serif;
     font-size: 16px;
+
 }
 
 
@@ -25,4 +21,11 @@ Microsoft Tai Le*/
     margin: 0px;
     padding: 0px;
     list-style: none;
+}
+
+
+
+body {
+    background-color: var(--dark-blue);
+    max-width: 800px;
 }
