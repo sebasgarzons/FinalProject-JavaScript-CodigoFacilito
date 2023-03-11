@@ -6,18 +6,29 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/darkmode.css">
+     
       <title>NoteApp</title>
   </head>
 
 
   <body>
 
-    <header class="header">
-        <div class="header__menu">
-            <img src="assets/hamburger.svg" class="header__icon" alt="Icono de menú">
-        </div>
-        <h1 class="header__title">Cody-Note's</h1>
-    </header>
+ <header class="header">
+    <nav class="header__menu">
+
+      <i class="uil uil-bars"></i>
+
+      <button class="dark-mode" id="dark-mode">        
+      <span><i class="uil uil-sun dark-mode-icon"></i></span>
+      <span><i class="uil uil-moon"></i></span>   
+      </button>    
+
+    </nav>
+
+    <h1 class="header-title">Cody Note's</h1>
+ </header>
+  
 
      <!-- <div class="welcome">
         <div class="welcome__div">
@@ -26,17 +37,17 @@
         </div>       
     </div> -->
 
-<!-- popup form - agregar nota -->
+
 <main>
-  
-  
-      <div class="popup-box">
+
+    <!-- popup form - agregar nota -->
+      <section class="popup-box">
         <div class="popup">
           <div class="content">
-            <header>
+            <div class="content-header">
               <p></p>
               <i class="uil uil-times"></i>
-            </header>
+            </div>
             <form action="#">
               <div class="row title">
                 <label for="title">Título</label>
@@ -50,10 +61,10 @@
             </form>
           </div>
         </div>
-      </div>
+      </section>
   
   
-  
+  <!-- agregar nota -->
       <div class="wrapper">
         <li class="add-box">
           <div class="icon"><i class="uil uil-plus"></i></div>
@@ -62,7 +73,15 @@
       </div>
 </main>
 
-    <script src="js/notas.js"></script>
+
+<!-- chatgpt -->
+
+<button class="btn">
+  <i class="uil uil-robot"></i>
+</button>
+
+    <script src="js/notas.js"></script>    
+    <script src="js/dark-mode.js"></script>    
     
   </body>
 </html>
