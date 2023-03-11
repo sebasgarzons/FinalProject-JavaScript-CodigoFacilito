@@ -1,0 +1,101 @@
+/* dark mode styles */
+
+body.light,
+body.light  .popup .content {
+
+  background-color: aliceblue;
+  color: var(--blue);
+
+}
+
+body.light .add-box,
+body.light .note,
+body.light .settings .menu li
+ {
+  background-color: rgba(183, 217, 246, 0.635);  
+}
+
+body.light .settings i {
+  color: var(--turquesa);
+}
+
+body.light .menu li:hover{
+  background-color: #12335f7e;
+  color: aliceblue;
+}
+
+body.light .bottom-content {
+  border-top: 1px solid var(--green);
+}
+
+body.light .note{ 
+  border: 1px solid rgba(208, 210, 213, 0.493);
+  color: var(--dark-blue);
+  
+}
+
+body.light .bottom-content span,
+body.light .settings {
+  color: var(--blue);
+}
+
+body.light .btn {
+  border: 2px solid var(--dark-blue);  
+  color: var(--blue);  
+  box-shadow: inset 0 0 10px rgba(27, 27, 253, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
+}
+
+body.light .btn:hover {
+  color: var(--blue);
+  box-shadow: inset 0 0 10px rgba(70, 70, 226, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
+}
+
+.dark-mode {    
+  color: inherit;
+  background-color: var(--turquesa);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.dark-mode::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  /* transition: .3s ease all; */
+  
+}
+
+.on {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.on::after {
+  right: 0;
+  left: unset;
+}
+
+
+
+
+.dark-mode span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: var(--white);
+}
+
