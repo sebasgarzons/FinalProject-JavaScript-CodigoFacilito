@@ -1,7 +1,7 @@
 const addBox = document.querySelector(".add-box"),
 popupBox = document.querySelector(".popup-box"),
-popupTitle = popupBox.querySelector("header p"),
-closeIcon = popupBox.querySelector("header i"),
+popupTitle = popupBox.querySelector(".content-header p"),
+closeIcon = popupBox.querySelector(".content-header i"),
 titleTag = popupBox.querySelector("input"),
 descTag = popupBox.querySelector("textarea"),
 addBtn = popupBox.querySelector("button");
@@ -53,8 +53,8 @@ function showNotes() {
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
                                 <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
-                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
+                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Editar</li>
+                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Borrar</li>
                                 </ul>
                             </div>
                         </div>
