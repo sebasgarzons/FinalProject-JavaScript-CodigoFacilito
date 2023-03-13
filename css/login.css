@@ -156,19 +156,18 @@ body{
     -webkit-border-radius: 15px 0px 15px 0px;
     -moz-border-radius: 15px 0px 0px 0px;
     -ms-border-radius: 15px 0px 0px 0px;
-    -o-border-radius: 15px 0px 0px 0px; 
-
+    -o-border-radius: 15px 0px 0px 0px;
     background-color: var(--dark-blue);
     color: var(--green);
     font-size: 1.35rem;
     font-weight: bold;
     border: none;
     margin-top: 20px;
-    transition: background-color .3 ease-in-out;
-    -webkit-transition: background-color .3 ease-in-out;
-    -moz-transition: background-color .3 ease-in-out;
-    -ms-transition: background-color .3 ease-in-out;
-    -o-transition: background-color .3 ease-in-out;
+    transition: background-color .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
 }
 
 .input-login input[type="submit"]:hover{
