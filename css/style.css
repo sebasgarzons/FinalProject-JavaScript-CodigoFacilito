@@ -428,3 +428,10 @@ cursor: pointer;
 
 
 } 
+
+.log_out{
+  position: absolute;
+  top: 20px;
+  left: 128px;
+  cursor: pointer;
+}
