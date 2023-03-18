@@ -58,27 +58,6 @@ main {
 }
 
 
- /* WELCOME SCREEN*/
-
-/* 
- .welcome {
-    display: flex;    
-    flex-direction: column;
-    align-items: center;
-}
-
-.welcome__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4em;
-}
-
-.welcome__img {    
-width: 50%;
-} */
-
-
 
 
 
@@ -430,8 +409,7 @@ cursor: pointer;
 } 
 
 .log_out{
-  position: absolute;
-  top: 20px;
-  left: 128px;
+    left: 128px; */
   cursor: pointer;
+  display: block;
 }
