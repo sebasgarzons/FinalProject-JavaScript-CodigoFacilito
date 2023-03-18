@@ -21,8 +21,14 @@
     list-style: none;
     font-family: var(--fuente);
     box-sizing: border-box;
+    text-decoration: none;
     
 }
+
+a:visited {
+  color: var(--green);
+}
+
 
 body {
     
@@ -65,8 +71,11 @@ main {
   display: block;
 }
 
+.log_out:hover {
 
+  text-decoration: underline;
 
+}
 
 
 .wrapper{
