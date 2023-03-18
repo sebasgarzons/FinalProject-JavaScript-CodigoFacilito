@@ -55,8 +55,10 @@
 
 /* dark mode styles */
 body.light,
-body.light  .popup .content {
-
+body.light  .popup .content,
+body.light .result,
+body.light .question
+{
   background-color: aliceblue;
   color: var(--blue);
 
@@ -64,7 +66,9 @@ body.light  .popup .content {
 
 body.light .add-box,
 body.light .note,
-body.light .settings .menu li
+body.light .settings .menu li,
+body.light .result,
+body.light .question
  {
   background-color: rgba(183, 217, 246, 0.635);  
 }
