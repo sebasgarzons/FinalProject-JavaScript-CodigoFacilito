@@ -7,17 +7,44 @@
   <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap"
         rel="stylesheet">
-  <title>Chat GPT</title>
-  <link rel="stylesheet" href="css/chatbot.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  
+  
+       
+  
+  <link rel="stylesheet" href="css/darkmode.css">
+  <link rel="stylesheet" href="css/chatbot.css"> 
+<link rel="stylesheet" href="css/style.css">
+  <title>Cody Note's chat</title>
 </head>
 <body>
 
-  <div class="content">
-      <textarea class="result" id="result" rows="10" disabled  placeholder="ChatBot" style="height: 70%;"></textarea>
+  <header class="header">
+    <nav class="header__menu">
+
+      <a href="index.html" class="log_out"> Atrás</a>
+
+      <button class="dark-mode" id="dark-mode">        
+      <span><i class="uil uil-sun dark-mode-icon"></i></span>
+      <span><i class="uil uil-moon"></i></span>   
+      </button>    
+
+    </nav>
+
+    <h1 class="header-title">Cody Note's</h1>
+    
+ </header>
   
-    <textarea class="question" id="inputQuestion" placeholder="Hola, soy un chatbot. ¿En qué puedo ayudarte hoy?" style="height: 20%;"></textarea>
-  </div>
+
+  
+    <div class="content">
+        <textarea class="result" id="result" rows="10" disabled  placeholder="ChatBot" style="height: 70%;"></textarea>
+  
+      <textarea class="question" id="inputQuestion" placeholder="Hola, soy un chatbot. ¿En qué puedo ayudarte hoy?" style="height: 20%;"></textarea>
+    </div>
+
 
   <script src="js/chatbot.js"></script>
+  <script src="js/dark-mode.js"></script>    
 </body>
 </html>

@@ -1,54 +1,7 @@
-/* dark mode styles */
 
-body.light,
-body.light  .popup .content {
 
-  background-color: aliceblue;
-  color: var(--blue);
+/* dark mode boton + header */
 
-}
-
-body.light .add-box,
-body.light .note,
-body.light .settings .menu li
- {
-  background-color: rgba(183, 217, 246, 0.635);  
-}
-
-body.light .settings i {
-  color: var(--turquesa);
-}
-
-body.light .menu li:hover{
-  background-color: #12335f7e;
-  color: aliceblue;
-}
-
-body.light .bottom-content {
-  border-top: 1px solid var(--green);
-}
-
-body.light .note{ 
-  border: 1px solid rgba(208, 210, 213, 0.493);
-  color: var(--dark-blue);
-  
-}
-
-body.light .bottom-content span,
-body.light .settings {
-  color: var(--blue);
-}
-
-body.light .btn {
-  border: 2px solid var(--dark-blue);  
-  color: var(--blue);  
-  box-shadow: inset 0 0 10px rgba(27, 27, 253, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
-}
-
-body.light .btn:hover {
-  color: var(--blue);
-  box-shadow: inset 0 0 10px rgba(70, 70, 226, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
-}
 
 .dark-mode {    
   color: inherit;
@@ -99,3 +52,58 @@ body.light .btn:hover {
   color: var(--white);
 }
 
+
+/* dark mode styles */
+body.light,
+body.light  .popup .content,
+body.light .result,
+body.light .question
+{
+  background-color: aliceblue;
+  color: var(--blue);
+
+}
+
+body.light .add-box,
+body.light .note,
+body.light .settings .menu li,
+body.light .result,
+body.light .question
+ {
+  background-color: rgba(183, 217, 246, 0.635);  
+}
+
+body.light .settings i {
+  color: var(--turquesa);
+}
+
+body.light .menu li:hover{
+  background-color: #12335f7e;
+  color: aliceblue;
+}
+
+body.light .bottom-content {
+  border-top: 1px solid var(--green);
+}
+
+body.light .note{ 
+  border: 1px solid rgba(208, 210, 213, 0.493);
+  color: var(--dark-blue);
+  
+}
+
+body.light .bottom-content span,
+body.light .settings {
+  color: var(--blue);
+}
+
+body.light .btn {
+  border: 2px solid var(--dark-blue);  
+  color: var(--blue);  
+  box-shadow: inset 0 0 10px rgba(27, 27, 253, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
+}
+
+body.light .btn:hover {
+  color: var(--blue);
+  box-shadow: inset 0 0 10px rgba(70, 70, 226, 0.636), 0 0 9px 3px rgba(27, 253, 156, 0.1); 
+}

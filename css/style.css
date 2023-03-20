@@ -21,14 +21,20 @@
     list-style: none;
     font-family: var(--fuente);
     box-sizing: border-box;
+    text-decoration: none;
     
 }
+
+a:visited, .chatbot:visited {
+  color: var(--green);
+}
+
 
 body {
     
     background-color: var(--blue);
     max-width: 800px;
-    
+    height: 100vh;
     color: var(--green);
     font-size: 16px;   
     padding: 1em;
@@ -42,46 +48,35 @@ main {
 }
 
 
+
+
 .header__menu {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 
-.header-title {
-    
-    
+.header-title {    
+  
   font-size: 2em;    
-    margin-top: 1em;
-    text-align: center;
+  margin-top: 1em;
+  text-align: center;
+  font-family: var(--fuente);
 
 }
 
 
- /* WELCOME SCREEN*/
-
-/* 
- .welcome {
-    display: flex;    
-    flex-direction: column;
-    align-items: center;
+.log_out{
+  left: 128px; 
+  cursor: pointer;
+  display: block;
 }
 
-.welcome__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4em;
+.log_out:hover {
+
+  text-decoration: underline;
+
 }
-
-.welcome__img {    
-width: 50%;
-} */
-
-
-
-
-
 
 
 .wrapper{
@@ -388,7 +383,9 @@ cursor: pointer;
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
-
+.uil-robot {
+  font-size: 2rem;
+}
 
 
 /* desktop queries */
@@ -428,3 +425,4 @@ cursor: pointer;
 
 
 } 
+

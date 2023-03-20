@@ -10,9 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap"
         rel="stylesheet">
+        
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>Cody-Note´s</title>
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <title>Cody Note's</title>
 </head>
 
 <body>
@@ -24,7 +28,7 @@
 
         <!-- Formulario -->
         <div class="caja-form ">
-            <form action="" class="formulario">
+            <form action="" class="formulario" id="sign_in_form">
 
                 <!-- Encabezado-->
                 <div class="texto">
@@ -61,8 +65,8 @@
                 <div class="iconos">
 
                     <!-- iconos -->
-                    <a href="#"><i class="bi bi-google"></i></a>
-                    <a href="#"><i class="bi bi-facebook "></i></a>
+                    <a id="googl_log"><i class="bi bi-google"></i></a>
+                    <a id="facebk_log"><i class="bi bi-facebook "></i></a>
                 </div>
             </div>
 
@@ -85,7 +89,7 @@
 
         <!-- Formulario -->
         <div class="caja-form ">
-            <form action="" class="formulario">
+            <form action="" class="formulario" id="sign_up_form">
 
                 <div class="texto">
                     <!-- encabezado-->
@@ -128,7 +132,7 @@
                 <p class="media">o Registrate con:</p>
                 <div class="iconos">
                     <!-- iconos -->
-                    <a href="#"><i class="bi bi-google"></i></a>
+                    <a href=""><i class="bi bi-google"></i></a>
                     <a href="#"><i class="bi bi-facebook "></i></a>
                 </div>
             </div>
@@ -148,7 +152,7 @@
 
 
     <script src="js/login.js"></script>
-   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
