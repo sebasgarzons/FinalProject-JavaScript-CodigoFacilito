@@ -6,7 +6,7 @@ inputQuestion.addEventListener("keypress", (e) => {
     SendQuestion();
 });
 
-const OPENAI_API_KEY = "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"; //Contraseña para que funcione el chat
+const OPENAI_API_KEY = "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"; //Contraseña para que funcione el chat
 
 //Función para funcionamiento de API
 function SendQuestion() {
