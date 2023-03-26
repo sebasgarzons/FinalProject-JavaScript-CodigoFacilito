@@ -12,7 +12,7 @@ facebkBttn.addEventListener('click', async () => {
         const credentialsFacebook = await signInWithPopup(auth, provider);
         console.log(credentialsFacebook);
         setTimeout(() => {
-            window.location.href = '/index.html'
+            window.location.href = '/main.html'
         }, 3000);
         showToast('Bienvenido!. En un momento serás redireccionado a la página principal')
     }catch(error){

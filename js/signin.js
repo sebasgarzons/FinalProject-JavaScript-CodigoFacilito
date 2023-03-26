@@ -17,7 +17,7 @@ signinform.addEventListener('submit', async (e) => {
 
             console.log('pasé')
             setTimeout(() => {
-                window.location.href = '/index.html'
+                window.location.href = '/main.html'
             }, 3000);
             showToast("Bienvenido. En unos momentos serás redireccionado a la página principal.")
         }catch(error){

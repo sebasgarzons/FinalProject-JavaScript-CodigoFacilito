@@ -12,7 +12,7 @@ googBttn.addEventListener('click', async () => {
         const credentialsGoogle = await signInWithPopup(auth, provider);
         console.log(credentialsGoogle);
         setTimeout(() => {
-            window.location.href = '/index.html'
+            window.location.href = '/main.html'
         }, 3000);
         showToast('Bienvenido!. En un momento serás redireccionado a la página principal')
     }catch(error){

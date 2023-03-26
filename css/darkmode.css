@@ -59,7 +59,7 @@ body.light  .popup .content,
 body.light .result,
 body.light .question
 {
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   color: var(--blue);
 
 }
@@ -70,7 +70,7 @@ body.light .settings .menu li,
 body.light .result,
 body.light .question
  {
-  background-color: rgba(183, 217, 246, 0.635);  
+  background-color: #b7d9f6a2;  
 }
 
 body.light .settings i {

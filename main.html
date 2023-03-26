@@ -1,0 +1,83 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/darkmode.css">
+      
+      <title>Cody's Notes </title>
+  </head>
+
+
+<body>
+
+ <header class="header">
+    <nav class="header__menu">
+
+      <p class="log_out" id="log_out">Salir</p>
+
+      <button class="dark-mode" id="dark-mode">        
+      <span><i class="uil uil-sun dark-mode-icon"></i></span>
+      <span><i class="uil uil-moon"></i></span>   
+      </button>    
+
+    </nav>
+
+    <h1 class="header-title">Cody Note's</h1>
+    
+ </header>
+  
+
+<main>
+
+    
+
+    <!-- popup form - agregar nota -->
+      <section class="popup-box">
+        <div class="popup">
+          <div class="content">
+            <div class="content-header">
+              <p></p>
+              <i class="uil uil-times"></i>
+            </div>
+            <form action="#">
+              <div class="row title">
+                <label for="title">Título</label>
+                <input type="text" spellcheck="false" id="title">
+              </div>
+              <div class="row description">
+                <label for="description">Descripción</label>
+                <textarea spellcheck="false" id="description"></textarea>
+              </div>
+              <button>Agregar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+  
+  
+  <!-- agregar nota -->
+      <div class="wrapper">
+        <li class="add-box">
+          <div class="icon"><i class="uil uil-plus"></i></div>
+          <p>Agregar nota</p>
+        </li>
+      </div>
+</main>
+
+
+<!-- chatgpt -->
+
+<button class="btn">
+  <a href="chatbot.html" class="chatbot"><i class="uil uil-robot"></i></a>
+  
+</button>
+
+    <script src="js/notas.js"></script>    
+    <script src="js/dark-mode.js"></script>    
+    <script type='module' src="./js/logout.js"></script>
+  </body>
+</html>

@@ -1,83 +1,158 @@
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/darkmode.css">
-      
-      <title>Cody's Notes </title>
-  </head>
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <title>Cody's Notes </title>
+</head>
 
 <body>
+    <!-- Contenedor General Iniciar sesión -->
+    <div class="contenedor iniciar-sesion-form">
 
- <header class="header">
-    <nav class="header__menu">
+        <!-- Imagen -->
+        <div class="imagen-formulario"></div>
 
-      <p class="log_out" id="log_out">Salir</p>
+        <!-- Formulario -->
+        <div class="caja-form ">
+            <form action="" class="formulario" id="sign_in_form">
 
-      <button class="dark-mode" id="dark-mode">        
-      <span><i class="uil uil-sun dark-mode-icon"></i></span>
-      <span><i class="uil uil-moon"></i></span>   
-      </button>    
+                <!-- Encabezado-->
+                <div class="texto">
+                    <h1 class="encabezado">Bienvenido a Cody-Note´s</h1>
+                    <p class="subtitulo">Inicia sesión con tú cuenta</p>
+                </div>
 
-    </nav>
+                <!-- input-usuario -->
+                <div class="input-usuario texto">
+                    <label for="usuario">Email</label>
+                    <input type="email" name="" id="usuario" placeholder="Ingresa tu email" required>
+                </div>
 
-    <h1 class="header-title">Cody Note's</h1>
-    
- </header>
-  
+                <!-- input-contraseña -->
+                <div class="input-contraseña texto">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="" id="contraseña" placeholder="Ingresa contraseña" required>
+                </div>
 
-<main>
+                <!-- link de recuperacion de contraseña -->
+                <div class="recuperar-contraseña texto">
+                    <a class="link-contraseña" href="">¿Olvidaste tu contraseña?</a>
+                </div>
 
-    
-
-    <!-- popup form - agregar nota -->
-      <section class="popup-box">
-        <div class="popup">
-          <div class="content">
-            <div class="content-header">
-              <p></p>
-              <i class="uil uil-times"></i>
-            </div>
-            <form action="#">
-              <div class="row title">
-                <label for="title">Título</label>
-                <input type="text" spellcheck="false" id="title">
-              </div>
-              <div class="row description">
-                <label for="description">Descripción</label>
-                <textarea spellcheck="false" id="description"></textarea>
-              </div>
-              <button>Agregar</button>
+                <!--botón de login -->
+                <div class="input-login">
+                    <input type="submit" value="Iniciar Sesión">
+                </div>
             </form>
-          </div>
+
+            <!-- Iconos redes-sociales -->
+            <div class="social-media texto">
+                <p class="media">o con:</p>
+                <div class="iconos">
+
+                    <!-- iconos -->
+                    <a id="googl_log"><i class="bi bi-google"></i></a>
+                    <a id="facebk_log"><i class="bi bi-facebook "></i></a>
+                </div>
+            </div>
+
+            <!--link de registro -->
+            <div class="registrar texto">
+                <p class="link-registrar">¿No tienes cuenta? <a href="#">Registrate</a> </p>
+            </div>
         </div>
-      </section>
-  
-  
-  <!-- agregar nota -->
-      <div class="wrapper">
-        <li class="add-box">
-          <div class="icon"><i class="uil uil-plus"></i></div>
-          <p>Agregar nota</p>
-        </li>
-      </div>
-</main>
 
 
-<!-- chatgpt -->
 
-<button class="btn">
-  <a href="chatbot.html" class="chatbot"><i class="uil uil-robot"></i></a>
-  
-</button>
+    </div>
 
-    <script src="js/notas.js"></script>    
-    <script src="js/dark-mode.js"></script>    
-    <script type='module' src="./js/logout.js"></script>
-  </body>
+    <!-- Formulario de Registro -->
+
+    <!-- Contenedor General Registro -->
+    <div class="contenedor registro-form">
+        <!-- Imagen -->
+        <div class="imagen-formulario"></div>
+
+        <!-- Formulario -->
+        <div class="caja-form ">
+            <form action="" class="formulario" id="sign_up_form">
+
+                <div class="texto">
+                    <!-- encabezado-->
+                    <h1 class="encabezado">Crear cuenta</h1>
+                </div>
+
+                <div class="input-nombre texto">
+
+                    <!-- input-nombre -->
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="" id="nombre" placeholder="Nombre" required>
+                </div>
+
+                <!-- input-usuario -->
+                <div class="input-usuario texto">
+                    <label for="usuario">Email</label>
+                    <input type="email" name="" id="usuario-registro" placeholder="Email" required>
+                </div>
+                <!-- input-contraseña -->
+                <div class="input-contraseña texto">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="" id="contraseña-registro" placeholder="Contraseña" required>
+                </div>
+
+                <!-- input-confirmar-contraseña -->
+                <div class="input-confirmar-contraseña texto">
+                    <label for="confirmar-contraseña">Confirmar Contraseña</label>
+                    <input type="con-password" name="" id="confirmar-contraseña" placeholder="Confirmar contraseña"
+                        required>
+                </div>
+
+                <!--botón de Crear cuenta -->
+                <div class="input-login">
+                    <input type="submit" value="Crear cuenta">
+                </div>
+            </form>
+
+            <!-- Iconos redes-sociales -->
+            <div class="social-media texto">
+                <p class="media">o Registrate con:</p>
+                <div class="iconos">
+                    <!-- iconos -->
+                    <a href=""><i class="bi bi-google"></i></a>
+                    <a href="#"><i class="bi bi-facebook "></i></a>
+                </div>
+            </div>
+
+            <!--link de registro -->
+            <div class="registrar texto">
+                <p class="link-iniciar-sesion">¿Ya eres usuario? <a href="#">Inicia sesión</a> </p>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="js/login.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
 </html>
