@@ -14,7 +14,8 @@ Realizar una webapp con todo lo visto en el Bootcamp de Javascript.
 🎨Tecnologías y buenas prácticas que se utilizaron:
 
 - Mobile First
-- Javascript vanilla.
+- Javascript.
+- JS Librerías.
 - Darkmode
 - APIs.
 - Conexión a Firebase.
