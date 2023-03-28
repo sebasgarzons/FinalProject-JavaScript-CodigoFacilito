@@ -71,17 +71,20 @@ window.addEventListener('DOMContentLoaded', async () => {
                     dataset
                 }
             }) => {
+                console.log('Edit Works')
+                addBox.click()
+                console.log(dataset.id)
                 const doc = await getTask(dataset.id)
+                console.log(doc)
                 const task = doc.data()
 
-                taskForm['task-title'].value = task.title
-                taskForm['task-description'].value = task.description
-                addBox.click()
+                taskForm['title'].value = task.title
+                taskForm['description'].value = task.description
 
                 editState = true;
                 id = doc.id
 
-                taskForm['bttn-task-save'].innerText = 'Actualizar'
+                taskForm['bttn-note-form'].innerText = 'Actualizar'
             })
         })
     })
@@ -99,21 +102,19 @@ taskForm.addEventListener('submit', (e) => {
 
     console.log(title, description);
 
-    saveTask(title, description);
-    taskForm.reset();
+    if (!editState) {
+        saveTask(title, description)
+    } else {
+        updateTask(id, {
+            title: title,
+            description: description
+        })
+
+        editState = false;
+    }
+
+    taskForm.reset()
     closeIcon.click();
-    // if (!editState) {
-    //     saveTask(title, description)
-    // } else {
-    //     updateTask(id, {
-    //         title: title,
-    //         description: description
-    //     })
-
-    //     editState = false;
-    // }
-
-    // taskForm.reset()
 })
 
 // array de meses para la fecha de la nota
