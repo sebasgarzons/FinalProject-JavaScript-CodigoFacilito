@@ -9,7 +9,9 @@ import './facebook_login.js'
 
 
 onAuthStateChanged(auth, async (user) => {
-    console.log(user)
+    console.log(user.uid)
+
 })
 
 console.log('Hello World');
+alert('Cambio hech');

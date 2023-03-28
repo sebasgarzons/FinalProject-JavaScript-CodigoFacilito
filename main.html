@@ -33,8 +33,6 @@
 
 <main>
 
-    
-
     <!-- popup form - agregar nota -->
       <section class="popup-box">
         <div class="popup">
@@ -43,7 +41,7 @@
               <p></p>
               <i class="uil uil-times"></i>
             </div>
-            <form action="#">
+            <form id="task-form">
               <div class="row title">
                 <label for="title">Título</label>
                 <input type="text" spellcheck="false" id="title">
@@ -52,7 +50,7 @@
                 <label for="description">Descripción</label>
                 <textarea spellcheck="false" id="description"></textarea>
               </div>
-              <button>Agregar</button>
+              <button id="bttn-note-form">Agregar</button>
             </form>
           </div>
         </div>
@@ -61,10 +59,17 @@
   
   <!-- agregar nota -->
       <div class="wrapper">
-        <li class="add-box">
-          <div class="icon"><i class="uil uil-plus"></i></div>
-          <p>Agregar nota</p>
-        </li>
+        <ul>
+
+          <li class="add-box">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Agregar nota</p>
+          </li>
+          
+        </ul>
+        <ul id="tasks-container">
+
+        </ul>
       </div>
 </main>
 
@@ -73,11 +78,11 @@
 
 <button class="btn">
   <a href="chatbot.html" class="chatbot"><i class="uil uil-robot"></i></a>
-  
 </button>
 
     <script src="js/notas.js"></script>    
     <script src="js/dark-mode.js"></script>    
     <script type='module' src="./js/logout.js"></script>
+    <script type='module' src="./js/crud.js"></script>
   </body>
 </html>

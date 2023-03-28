@@ -2,15 +2,11 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.2/fi
 import { signOut } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"
 import { auth } from '../controllers/firebase.js'
 
-onAuthStateChanged(auth, async (user) => {
-    console.log(user)
-})
-
 const log_out = document.querySelector('#log_out');
 
 log_out.addEventListener('click', async () => {
     await signOut(auth);
     console.log('sali usuario');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 })
 
