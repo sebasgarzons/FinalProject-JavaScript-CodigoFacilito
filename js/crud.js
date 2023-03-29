@@ -7,6 +7,9 @@ import {
     updateTask
 } from '../controllers/firebase-crud.js'
 
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"
+import { auth } from '../controllers/firebase.js'
+
 const addBox = document.querySelector(".add-box"),
     popupBox = document.querySelector(".popup-box"),
     popupTitle = popupBox.querySelector(".content-header p"),
@@ -19,35 +22,70 @@ let taskContainer = document.getElementById('tasks-container')
 
 let editState = false;
 let id = '';
+let user_id; // define a global variable to store the user ID
+
+function getUserID() {
+    return new Promise((resolve, reject) => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          console.log('OnAuthStateChanged: ', user.uid);
+          const user_id = user.uid;
+          console.log('Ya tengo bien el uid: ', user_id);
+          resolve(user_id);
+        } else {
+          reject('User not logged in.');
+        }
+      });
+    });
+  }
+
+
+async function getUserIDAndUpdateGlobalVariable() {
+  try {
+    user_id = await getUserID();
+    return(user_id) // set the global variable to the user ID
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// getUserIDAndUpdateGlobalVariable(); // call the async function to get the user ID and update the global variable
 
 window.addEventListener('DOMContentLoaded', async () => {
-    alert('PageLoaded')
-
+    alert('PageLoaded Vite 2')
+    let x = await getUserIDAndUpdateGlobalVariable();
+    console.log('Listo para comparar el user id: !', x)
     onGetTasks((querySnapshot) =>  {
 
         let html = '';
-
+        let compare_uid;
         querySnapshot.forEach(doc => {
-            console.log(doc.data())
-            const task = doc.data()
-            html +=  `
-                    <li class="note">
-                        <div class="details">
-                            <p>${task.title}</p>
-                            <span>${task.description}</span>
-                        </div>
-                        <div class="bottom-content">
-                            <span>date</span>
-                            <div class="settings">
-                                <i class="uil uil-ellipsis-h"></i>
-                                <ul class="menu">
-                                    <li><i class="uil uil-pen"><button class='btn-edit' data-id="${doc.id}">Editar</button></i></li>
-                                    <li><i><button class='btns-delete' data-id="${doc.id}">Borrar</button></i></li>
-                                </ul>
+            compare_uid = (doc.data().uid_note)
+            console.log(compare_uid)
+
+            if (x == compare_uid){
+                console.log(doc.data())
+                const task = doc.data()
+                html +=  `
+                        <li class="note">
+                            <div class="details">
+                                <p>${task.title}</p>
+                                <span>${task.description}</span>
                             </div>
-                        </div>
-                    </li>
-                `;
+                            <div class="bottom-content">
+                                <span>date</span>
+                                <div class="settings">
+                                    <i class="uil uil-ellipsis-h"></i>
+                                    <ul class="menu">
+                                        <li><i class="uil uil-pen"><button class='btn-edit' data-id="${doc.id}">Editar</button></i></li>
+                                        <li><i><button class='btns-delete' data-id="${doc.id}">Borrar</button></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+            }
+
         })
 
         taskContainer.innerHTML = html;
@@ -96,14 +134,16 @@ console.log(taskForm);
 
 taskForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    console.log('User ID: Works with this', user_id);
     const title = taskForm['title'].value;
     const description = taskForm['description'].value;
+    const uid_note = user_id;
 
     console.log(title, description);
 
     if (!editState) {
-        saveTask(title, description)
+        saveTask(title, description, uid_note)
+        console.log(title, description, uid_note);
     } else {
         updateTask(id, {
             title: title,

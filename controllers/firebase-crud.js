@@ -1,11 +1,4 @@
 
-// import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"
-// import { auth } from '../controllers/firebase.js'
-
-// onAuthStateChanged(auth, async (user) => {
-//     console.log(user.uid)
-// })
-
 import {
     initializeApp
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
@@ -35,11 +28,12 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const saveTask = (title, description) => {
-    console.log(title, description);
+export const saveTask = (title, description, uid_note) => {
+    console.log(title, description, uid_note);
     addDoc(collection(db, 'tasks'), {
         title,
-        description
+        description,
+        uid_note
     })
 }
 
