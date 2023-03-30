@@ -47,5 +47,4 @@ export const getTask = id => getDoc(doc(db, 'tasks', id));
 
 export const updateTask = (id, newfields) => updateDoc(doc(db, 'tasks', id), newfields)
 
-alert('Go Crud')
 console.log('Enter Works')

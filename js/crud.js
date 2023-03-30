@@ -52,7 +52,6 @@ async function getUserIDAndUpdateGlobalVariable() {
 // getUserIDAndUpdateGlobalVariable(); // call the async function to get the user ID and update the global variable
 
 window.addEventListener('DOMContentLoaded', async () => {
-    alert('PageLoaded Vite 2')
     let x = await getUserIDAndUpdateGlobalVariable();
     console.log('Listo para comparar el user id: !', x)
     onGetTasks((querySnapshot) =>  {

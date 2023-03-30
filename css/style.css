@@ -84,6 +84,10 @@ main {
   grid-template-columns: repeat(auto-fill, 265px);
 }
 
+.wrapper>ul:nth-of-type(1){
+  margin-left: -6.25rem;
+}
+
 
 .wrapper li{
   height: 250px; 
@@ -110,6 +114,11 @@ main {
   justify-content: center;
   border: 1px dashed var(--turquesa);
   box-shadow: 0 2px 4px rgba(0,0,0,0.11);
+  border-radius: 50% !important;
+  height: 8em !important;
+  width: 8em;
+  box-sizing: border-box;
+  /* padding: 82px 0;*/
 }
 
 .add-box:hover {
@@ -125,7 +134,7 @@ main {
 .add-box p{
   color: var(--turquesa); 
   font-weight: 500;
-  margin-top: 20px;
+  text-align: center;
 }
 
 /* nota */
@@ -169,6 +178,7 @@ main {
 .bottom-content span{
     color: var(--white);
     font-size: 14px;
+    visibility: hidden;
 }
 
 
@@ -179,8 +189,22 @@ main {
 
 .bottom-content .settings i{
   color: var(--green);
-  cursor: pointer;
+  cursor: default;
   font-size: 15px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  /* padding: 8px 2px;*/
+}
+
+.bottom-content .settings i button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    margin: 12px 0px;
+    margin-left: -2px;
+    cursor: pointer;
+    padding: 0 12px 0 4px;
 }
 
 
@@ -210,12 +234,14 @@ main {
 .settings .menu li{
   height: 25px;
   font-size: 16px;
-  margin-bottom: 2px;
-  padding: 17px 15px;
+  /* margin-bottom: 2px; */
+  /* padding: 17px 15px; */
   cursor: pointer;
   box-shadow: none;
   border-radius: 0;
   justify-content: flex-start;
+  padding: 0;
+  margin: 12px 0;
 }
 
 
@@ -412,7 +438,7 @@ form button{
 
 
   .wrapper {
-    width: 100%;
+    width: 78%;
     margin: 50px;
     display: flex;    
     gap: 25px;
@@ -429,3 +455,16 @@ form button{
 
 } 
 
+@media (max-width: 500px){
+ 
+  .add-box{
+    width: 4em !important;
+    height: 4em !important;
+  }
+
+  .add-box p{
+    display: none;
+  }
+  
+}
+  
