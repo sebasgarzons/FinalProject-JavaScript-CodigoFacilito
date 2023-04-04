@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                             <div class="bottom-content">
                                 <span>date</span>
                                 <div class="settings">
-                                    <i class="uil uil-ellipsis-h"></i>
+                               
                                     <ul class="menu">
                                         <li><i class="uil uil-pen"><button class='btn-edit' data-id="${doc.id}">Editar</button></i></li>
                                         <li><i class="uil uil-trash"><button class='btns-delete' data-id="${doc.id}">Borrar</button></i></li>
