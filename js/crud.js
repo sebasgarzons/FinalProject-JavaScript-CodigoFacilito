@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                                     <i class="uil uil-ellipsis-h"></i>
                                     <ul class="menu">
                                         <li><i class="uil uil-pen"><button class='btn-edit' data-id="${doc.id}">Editar</button></i></li>
-                                        <li><i><button class='btns-delete' data-id="${doc.id}">Borrar</button></i></li>
+                                        <li><i class="uil uil-trash"><button class='btns-delete' data-id="${doc.id}">Borrar</button></i></li>
                                     </ul>
                                 </div>
                             </div>
